@@ -58,5 +58,12 @@ function showQuestion() {
 }
 
 function answer(answer) {
-    
+    let question = questions[currentQuestion];
+    let selectedQuestionNumber = selection.slice(-1);
+
+    if (selectedQuestionNumber == question['right_answer']) {
+        
+    }else{
+        
+    }
 }
