@@ -103,3 +103,12 @@ function resetAnswerButtons() {
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_4').parentNode.classList.remove('bg-success');
 }
+
+function restartGame(){
+    document.getElementById('header-image').src = './assets/img/pencil.jpg.jpg';
+    document.getElementById('question-body').style = '';
+    document.getElementById('endscreen').style = 'display: none';
+    currentQuestion = 0;
+    rightQuestions = 0;
+    init();
+}
