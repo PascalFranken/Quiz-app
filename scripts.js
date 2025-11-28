@@ -43,6 +43,8 @@ const questions = [
 
 let currentQuestion = 0;
 let rightQuestions = 0;
+let AUDIO_SUCCESS = new Audio('./assets/sounds/right.mp3');
+let AUDIO_FAIL = new Audio('./assets/sounds/wrong.mp3');
 
 function init() {
     document.getElementById('all-questions').innerHTML = questions.length;
@@ -78,10 +80,12 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        AUDIO_SUCCESS.play();
         rightQuestions++;
     }else{
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
+        AUDIO_FAIL.play();
     }
     document.getElementById('next-button').disabled = false;
 }
