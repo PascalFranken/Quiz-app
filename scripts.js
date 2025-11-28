@@ -50,7 +50,8 @@ function init() {
 
 function showQuestion() {
     if (currentQuestion >= questions.length) {
-        
+        document.getElementById('endscreen').style = "";
+        document.getElementById('question-body').style = 'display: none';
     }else{
     let question = questions[currentQuestion];
     document.getElementById('question-number').innerHTML = currentQuestion +1;
