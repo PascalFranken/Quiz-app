@@ -55,6 +55,7 @@ function showQuestion() {
         document.getElementById('question-body').style = 'display: none';
         document.getElementById('amount-of-questions').innerHTML = questions.length;
         document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
+        document.getElementById('header-image').src = './assets/img/trophy.png';
     }else{
     let question = questions[currentQuestion];
     document.getElementById('question-number').innerHTML = currentQuestion +1;
